@@ -20,8 +20,27 @@ using namespace std;
 /*
  * 
  */
-int main(int argc, char** argv) {    
-    cout << "Hello World!";    
-    printf("HOLA");
+int main(int argc, char** argv) {
+    //printf("HOLA");        
+    //printf("%p", &prova); //pointer
+    //printf("%i", prova);
+    cout << "Hello World!";
+
+    int prova = 9;
+    int * provaPointer = &prova;
+    //var
+    cout << "\n" << prova;
+    //var address
+    cout << "\n" << &prova;
+    //ERROR
+    //cout << "\n" << *prova;
+    //prova var address (pointer value)
+    cout << "\n" << provaPointer;
+    //access to pointer content
+    cout << "\n" << *provaPointer;
+    //pointer address
+    cout << "\n" << &provaPointer;
+
+
     return 0;
 }
