@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     //printf("HOLA");        
     //printf("%p", &prova); //pointer
     //printf("%i", prova);
-    cout << "Hello World!";
+    cout << "\r" << "Hello World!";
 
     int prova = 9;
     //set the pointer to point prova var memory address
@@ -42,12 +42,20 @@ int main(int argc, char** argv) {
     cout << "\n" << *provaPointer;
     //pointer address
     cout << "\n" << &provaPointer;
-    
+
     //OBJECT
     Student s(638);
     s.setEdat(8);
     cout << "\nEdat " << s.getEdat();
     cout << "\nTelf " << s.getTelf();
+
+    /////////////////////
+
+    int i;
+    cout << "Please enter an integer value: ";
+    cin >> i;
+    cout << "The value you entered is " << i;
+    cout << " and its double is " << i * 2 << ".\n";
 
     return 0;
 }
