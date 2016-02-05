@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
     cout << "Hello World!";
 
     int prova = 9;
+    //set the pointer to point prova var memory address
     int * provaPointer = &prova;
     //var
     cout << "\n" << prova;
