@@ -13,7 +13,8 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <stdio.h>
+
+#include "Student.h"
 
 using namespace std;
 
@@ -40,7 +41,12 @@ int main(int argc, char** argv) {
     cout << "\n" << *provaPointer;
     //pointer address
     cout << "\n" << &provaPointer;
-
+    
+    //OBJECT
+    Student s(638);
+    s.setEdat(8);
+    cout << "\nEdat " << s.getEdat();
+    cout << "\nTelf " << s.getTelf();
 
     return 0;
 }
