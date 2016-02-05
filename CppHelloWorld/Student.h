@@ -17,8 +17,10 @@
 class Student {
     int telf;
 public:
+    //constructors
     Student(int);
     Student(const Student& orig);
+    //destructor
     virtual ~Student();
 
     int getTelf() {

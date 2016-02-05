@@ -21,6 +21,7 @@ Student::Student(int _telf) {
 Student::Student(const Student& orig) {
 }
 
+//destructor
 Student::~Student() {
 }
 
