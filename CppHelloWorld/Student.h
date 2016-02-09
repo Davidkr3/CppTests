@@ -15,6 +15,7 @@
 #define STUDENT_H
 
 class Student {
+    //phone
     int telf;
 public:
     //constructors

@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
     Student s(638);
     s.setEdat(8);
     cout << "\nEdat " << s.getEdat();
-    cout << "\nTelf " << s.getTelf();
+    cout << "\nTelf " << s.getTelf() << "\n";
 
     /////////////////////
 
