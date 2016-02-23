@@ -45,9 +45,14 @@ int main(int argc, char** argv) {
 
     //OBJECT
     Student s(638);
+    
+    Student * sp = &s;
+    
     s.setEdat(8);
     cout << "\nEdat " << s.getEdat();
-    cout << "\nTelf " << s.getTelf() << "\n";
+    cout << "\nEdat pointer " << sp->getEdat(); //like *sp.getEdat();
+    cout << "\nTelf " << s.getTelf() << "\n";  
+    
 
     /////////////////////
 

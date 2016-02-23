@@ -13,7 +13,7 @@
 
 #include "Student.h"
 
-//constructor
+//constructor overload
 Student::Student(int _telf) {
     telf = _telf;
 }
