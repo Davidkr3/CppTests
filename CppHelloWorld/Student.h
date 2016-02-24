@@ -38,7 +38,7 @@ public:
 
 
 private:
-    int edat = 5;
+    int edat;
 };
 
 #endif /* STUDENT_H */

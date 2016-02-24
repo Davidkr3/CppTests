@@ -18,6 +18,57 @@
 
 using namespace std;
 
+///POLIMORFISM
+
+class CPolygon {
+protected:
+    int width, height;
+public:
+
+    void set_values(int a, int b) {
+        width = a;
+        height = b;
+    }
+    virtual int area(void) = 0;
+};
+
+class CRectangle : public CPolygon {
+public:
+
+    int area(void) {
+        return (width * height);
+    }
+};
+
+class CTriangle : public CPolygon {
+public:
+
+    int area(void) {
+        return (width * height / 2);
+    }
+};
+
+///////
+
+template <class T>
+class mypair {
+    T a, b;
+public:
+
+    mypair(T first, T second) {
+        a = first;
+        b = second;
+    }
+    T getmax();
+};
+
+template <class T>
+T mypair<T>::getmax() {
+    T retval;
+    retval = a > b ? a : b;
+    return retval;
+}
+
 /*
  * 
  */
@@ -44,15 +95,18 @@ int main(int argc, char** argv) {
     cout << "\n" << &provaPointer;
 
     //OBJECT
-    Student s(638);
-    
+    Student s(6382568);
     Student * sp = &s;
-    
+    //the same in other way
+    Student * spn = new Student(111111); //new only for pointers
+    cout << "\nNew test " << (*spn).getTelf();
+
+
     s.setEdat(8);
     cout << "\nEdat " << s.getEdat();
     cout << "\nEdat pointer " << sp->getEdat(); //like *sp.getEdat();
-    cout << "\nTelf " << s.getTelf() << "\n";  
-    
+    cout << "\nTelf " << s.getTelf() << "\n";
+
 
     /////////////////////
 
@@ -61,6 +115,23 @@ int main(int argc, char** argv) {
     cin >> i;
     cout << "The value you entered is " << i;
     cout << " and its double is " << i * 2 << ".\n";
+
+
+    //templates
+    mypair <int> myobject(100, 75);
+    mypair <double> myobjectDouble(100.5, 100.4);
+    cout << myobject.getmax() << "\n";
+    cout << myobjectDouble.getmax() << "\n";
+
+    //polimorfism
+    CRectangle rect;
+    CTriangle trgl;
+    CPolygon * ppoly1 = &rect;
+    CPolygon * ppoly2 = &trgl;
+    ppoly1->set_values(4, 5);
+    ppoly2->set_values(4, 5);
+    cout << "hola"<<ppoly1->area() << endl;
+    cout << ppoly2->area() << endl;
 
     return 0;
 }
